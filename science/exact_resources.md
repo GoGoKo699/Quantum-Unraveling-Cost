@@ -31,7 +31,7 @@ Now allow an arbitrary finite-dimensional pure shared state $`|\chi\rangle`$ as 
 
 ```math
 E(|\chi\rangle)
-=S\!\left(\operatorname{Tr}_B|\chi\rangle\langle\chi|\right).
+=S\!\left(\mathrm{Tr}_B|\chi\rangle\langle\chi|\right).
 ```
 
 The minimum for exact process simulation is
@@ -60,7 +60,7 @@ E_F(\sigma_{AB})
 =\inf_{\{q_x,\psi_x\}:\,
           \sigma=\sum_xq_x|\psi_x\rangle\langle\psi_x|}
 \sum_xq_x
-S\!\left(\operatorname{Tr}_B|\psi_x\rangle\langle\psi_x|\right).
+S\!\left(\mathrm{Tr}_B|\psi_x\rangle\langle\psi_x|\right).
 ```
 
 The exact optimization is

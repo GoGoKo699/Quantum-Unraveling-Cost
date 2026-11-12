@@ -145,8 +145,8 @@ W=(\Pi_1\otimes\Pi_1)
 The vector is embedded in the corresponding successful subspace, so $`0\leq W\leq I`$. If the local projection succeeds on $`\widetilde\Omega`$ with probability $`q'`$ and gives conditional state $`\tau'`$, write $`g'=\langle\Phi_N|\tau'|\Phi_N\rangle`$. Then
 
 ```math
-q'g'=\operatorname{Tr}(W\widetilde\Omega)
-\geq\operatorname{Tr}(W\Omega_{N,p,\zeta})-\varepsilon
+q'g'=\mathrm{Tr}(W\widetilde\Omega)
+\geq\mathrm{Tr}(W\Omega_{N,p,\zeta})-\varepsilon
 =q_Ng_N-\varepsilon.
 ```
 

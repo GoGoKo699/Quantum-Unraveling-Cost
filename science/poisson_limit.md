@@ -22,7 +22,7 @@ a=1-\varepsilon^2,
 \qquad
 k_{\varepsilon}
 =\min\{k\geq0:\Pr(K\leq k)\geq a\},
-\qquad K\sim\operatorname{Pois}(\mu).
+\qquad K\sim\mathrm{Pois}(\mu).
 ```
 
 Then the minimum initial Bell-pair supply under uniform purified process error satisfies
@@ -55,7 +55,7 @@ Let $`X_1,\ldots,X_N`$ be independent Poisson variables of mean $`\mu/N`$, and s
 =\frac{1-e^{-2\mu/N}}2=p_N.
 ```
 
-Hence $`S_N=\sum_iY_i`$ has distribution $`\operatorname{Bin}(N,p_N)`$, while $`\sum_iX_i`$ has distribution $`\operatorname{Pois}(\mu)`$. The coupling satisfies $`S_N\leq\sum_iX_i`$ pointwise. Therefore, for every integer $`k`$,
+Hence $`S_N=\sum_iY_i`$ has distribution $`\mathrm{Bin}(N,p_N)`$, while $`\sum_iX_i`$ has distribution $`\mathrm{Pois}(\mu)`$. The coupling satisfies $`S_N\leq\sum_iX_i`$ pointwise. Therefore, for every integer $`k`$,
 
 ```math
 F_N(k):=\Pr(S_N\leq k)

@@ -70,7 +70,7 @@ To prove this first for a pure state $`|v\rangle`$ of Schmidt rank at most $`R`$
 ```math
 |\langle\psi|v\rangle|^2
 \leq\| (\Pi\otimes I)|\psi\rangle\|^2
-=\operatorname{Tr}(\Pi\psi_A)
+=\mathrm{Tr}(\Pi\psi_A)
 \leq\sum_{j=1}^{R}\lambda_j.
 ```
 
@@ -112,7 +112,7 @@ w_k=(1-p)^{N-k}p^k
 
 and multiplicity $`\binom Nk`$. Since $`w_{k+1}/w_k=p/(1-p)<1`$, the descending order consists of complete shells of increasing Hamming weight, followed possibly by part of one shell.
 
-Write $`a=1-\varepsilon^2`$ and let $`B\sim\operatorname{Bin}(N,p)`$. Set
+Write $`a=1-\varepsilon^2`$ and let $`B\sim\mathrm{Bin}(N,p)`$. Set
 
 ```math
 k_N=\min\{k:\Pr(B\leq k)\geq a\}.

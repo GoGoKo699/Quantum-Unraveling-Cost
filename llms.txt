@@ -15,5 +15,8 @@ Routes:
 - Weak-step continuum interpretation, restricted interfaces and finite cadence: science/continuum_and_cadence.md.
 - Attribution and comparison boundaries: references/RELATED_WORK.md and references/references.bib.
 - Reproduction and finite verification limits: verification/README.md, tools/verify.py, tests/test_science.py.
+- Selected educational source and exact convention bridge: learning/WILDE_BRIDGE.md (Mark M. Wilde, Quantum Information Theory, second edition, 2017).
+- One complete small resource calculation: learning/WORKED_EXAMPLE.md.
+- Ordered background-to-result understanding route: learning/MILESTONES.md, exactly M01-M30; overview in learning/README.md.
 
-Do not replace efficient branch backaction by POVM statistics, global error by per-step error, or deterministic initial supply by expected/net consumption. The exact rank-tail formula uses purified distance; half trace distance has related bounds. The asymptotic N counts instrument slots at fixed gamma*T and total error, not the number of independent fixed-strength experiments. The ideal finite-N theorem is exact; detector-inefficiency and finite-speed hardware claims require additional models.
+Do not replace efficient branch backaction by POVM statistics, global error by per-step error, or deterministic initial supply by expected/net consumption. The exact rank-tail formula uses purified distance; half trace distance has related bounds. The asymptotic N counts instrument slots at fixed gamma*T and total error, not the number of independent fixed-strength experiments. The ideal finite-N theorem is exact; other detector-inefficiency models and finite-speed hardware require separate analysis.
