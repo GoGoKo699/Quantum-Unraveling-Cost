@@ -35,7 +35,7 @@ List the squared Schmidt coefficients of $`|\Phi_{N,p}\rangle=|\phi_p\rangle^{\o
 \lambda_1\geq\lambda_2\geq\cdots\geq\lambda_{2^N}\geq0.
 ```
 
-For $`0\leq\varepsilon<1`$, define
+For $`0\leq\varepsilon\lt 1`$, define
 
 ```math
 R_{\varepsilon}(N,p)
@@ -104,13 +104,13 @@ The converse and this construction meet exactly. The ingredients are standard pu
 
 ## Evaluating the rank without enumerating bit strings
 
-Assume $`0<p<1/2`$. A Schmidt string of Hamming weight $`k`$ has probability
+Assume $`0\lt p\lt 1/2`$. A Schmidt string of Hamming weight $`k`$ has probability
 
 ```math
 w_k=(1-p)^{N-k}p^k
 ```
 
-and multiplicity $`\binom Nk`$. Since $`w_{k+1}/w_k=p/(1-p)<1`$, the descending order consists of complete shells of increasing Hamming weight, followed possibly by part of one shell.
+and multiplicity $`\binom Nk`$. Since $`w_{k+1}/w_k=p/(1-p)\lt 1`$, the descending order consists of complete shells of increasing Hamming weight, followed possibly by part of one shell.
 
 Write $`a=1-\varepsilon^2`$ and let $`B\sim\mathrm{Bin}(N,p)`$. Set
 
@@ -133,7 +133,7 @@ R_{\varepsilon}(N,p)
 
 The numerator is strictly positive by minimality of $`k_N`$, and the final ceiling is no larger than $`\binom N{k_N}`$. Keeping the entire last shell is a valid upper bound, but the partial-shell expression is the exact minimum rank.
 
-For $`p=0`$ the state is a product and the cost is zero. For $`p=1/2`$ all $`2^N`$ squared Schmidt coefficients are equal, so $`R_{\varepsilon}=\lceil(1-\varepsilon^2)2^N\rceil`$. The physical semigroup discretization has $`0<p_N<1/2`$ for finite positive $`\gamma,T,N`$.
+For $`p=0`$ the state is a product and the cost is zero. For $`p=1/2`$ all $`2^N`$ squared Schmidt coefficients are equal, so $`R_{\varepsilon}=\lceil(1-\varepsilon^2)2^N\rceil`$. The physical semigroup discretization has $`0\lt p_N\lt 1/2`$ for finite positive $`\gamma,T,N`$.
 
 ## A trace-distance process error
 
@@ -151,7 +151,7 @@ For normalized states, the Fuchs–van de Graaf inequalities imply
 d_T\leq d_P\leq\sqrt{2d_T}.
 ```
 
-Thus, for $`0\leq\varepsilon<1/2`$,
+Thus, for $`0\leq\varepsilon\lt 1/2`$,
 
 ```math
 C_P^{\sqrt{2\varepsilon}}(N,p)

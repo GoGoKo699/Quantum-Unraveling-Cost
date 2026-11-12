@@ -67,7 +67,7 @@ At zero error the exact Bell supply is $`N`$. Minimizing initial entanglement of
 The [inefficient-record theorem](science/inefficient_record.md) keeps the unread dynamics fixed and passes each ideal sign through a binary symmetric channel. Write its known efficiency parameter as $`0\le\zeta\le1`$; the sign-flip probability is $`(1-\sqrt\zeta)/2`$. For every fixed $`\zeta>0`$, logarithmic Bell supply survives at fixed whole-process half-trace error
 
 ```math
-0<\epsilon<\zeta\mu e^{-\mu}.
+0\lt \epsilon\lt \zeta\mu e^{-\mu}.
 ```
 
 A mixed-state entanglement witness proves the lower bound, and a locally dephased approximation to the joint meter resource gives the upper. At $`\zeta=0`$ the retained sign is a fair coin and the process is entanglement-free. The sharp Poisson coefficient above is for the efficient instrument; no exact coefficient is claimed for the noisy record.
