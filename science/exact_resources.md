@@ -4,7 +4,7 @@
 
 A weak meter can have small entanglement entropy while still having Schmidt rank two. These facts give different exact simulation costs depending on what the initial resource budget measures. The distinction persists even when the target process is fixed.
 
-Let $`N\geq1`$ and $`0<p<1/2`$. The [resource equivalence](resource_equivalence.md) converts the complete monitored process by LOCC to and from
+Let $`N\geq1`$ and $`0\lt p\lt 1/2`$. The [resource equivalence](resource_equivalence.md) converts the complete monitored process by LOCC to and from
 
 ```math
 |\Phi_{N,p}\rangle
@@ -31,7 +31,7 @@ Now allow an arbitrary finite-dimensional pure shared state $`|\chi\rangle`$ as 
 
 ```math
 E(|\chi\rangle)
-=S\!\left(\operatorname{Tr}_B|\chi\rangle\langle\chi|\right).
+=S\!\left(\mathrm{Tr}_B|\chi\rangle\langle\chi|\right).
 ```
 
 The minimum for exact process simulation is
@@ -60,7 +60,7 @@ E_F(\sigma_{AB})
 =\inf_{\{q_x,\psi_x\}:\,
           \sigma=\sum_xq_x|\psi_x\rangle\langle\psi_x|}
 \sum_xq_x
-S\!\left(\operatorname{Tr}_B|\psi_x\rangle\langle\psi_x|\right).
+S\!\left(\mathrm{Tr}_B|\psi_x\rangle\langle\psi_x|\right).
 ```
 
 The exact optimization is
@@ -84,7 +84,7 @@ This optimization assigns a value of an entanglement monotone to an initial reso
 
 ## Fixed-error Bell supply is a separate question
 
-At allowed purified process error $`0<\varepsilon<1`$, the initial Bell-pair supply is
+At allowed purified process error $`0\lt \varepsilon\lt 1`$, the initial Bell-pair supply is
 
 ```math
 C_P^{\varepsilon}(N,p)

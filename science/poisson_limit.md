@@ -15,14 +15,14 @@ The result below holds for one complete fixed-time experiment with a fixed allow
 
 ## A sharp quantile law
 
-For fixed $`0<\varepsilon<1`$, let
+For fixed $`0\lt \varepsilon\lt 1`$, let
 
 ```math
 a=1-\varepsilon^2,
 \qquad
 k_{\varepsilon}
 =\min\{k\geq0:\Pr(K\leq k)\geq a\},
-\qquad K\sim\operatorname{Pois}(\mu).
+\qquad K\sim\mathrm{Pois}(\mu).
 ```
 
 Then the minimum initial Bell-pair supply under uniform purified process error satisfies
@@ -43,7 +43,7 @@ C_P^{\varepsilon}(N,p_N)=0
 \quad\text{for every }N.
 ```
 
-This occurs precisely when $`\varepsilon^2\geq1-e^{-\mu}`$. In the complementary regime $`\varepsilon^2<1-e^{-\mu}`$, the coefficient is a positive integer and the required supply grows as $`\Theta_{\mu,\varepsilon}(\log N)`$.
+This occurs precisely when $`\varepsilon^2\geq1-e^{-\mu}`$. In the complementary regime $`\varepsilon^2\lt 1-e^{-\mu}`$, the coefficient is a positive integer and the required supply grows as $`\Theta_{\mu,\varepsilon}(\log N)`$.
 
 ## Why the Poisson boundary is controlled
 
@@ -55,7 +55,7 @@ Let $`X_1,\ldots,X_N`$ be independent Poisson variables of mean $`\mu/N`$, and s
 =\frac{1-e^{-2\mu/N}}2=p_N.
 ```
 
-Hence $`S_N=\sum_iY_i`$ has distribution $`\operatorname{Bin}(N,p_N)`$, while $`\sum_iX_i`$ has distribution $`\operatorname{Pois}(\mu)`$. The coupling satisfies $`S_N\leq\sum_iX_i`$ pointwise. Therefore, for every integer $`k`$,
+Hence $`S_N=\sum_iY_i`$ has distribution $`\mathrm{Bin}(N,p_N)`$, while $`\sum_iX_i`$ has distribution $`\mathrm{Pois}(\mu)`$. The coupling satisfies $`S_N\leq\sum_iX_i`$ pointwise. Therefore, for every integer $`k`$,
 
 ```math
 F_N(k):=\Pr(S_N\leq k)
@@ -67,11 +67,11 @@ Also $`S_N`$ converges in distribution to $`K`$, since $`p_N\to0`$ and $`Np_N\to
 By definition of $`k_{\varepsilon}`$,
 
 ```math
-F_{\mu}(k_{\varepsilon}-1)<a
+F_{\mu}(k_{\varepsilon}-1)\lt a
 \leq F_{\mu}(k_{\varepsilon}).
 ```
 
-The lower strict inequality and convergence show that $`F_N(k_{\varepsilon}-1)<a`$ for all sufficiently large $`N`$. The coupling gives $`F_N(k_{\varepsilon})\geq a`$ for every $`N`$, even when the upper inequality is equality. Consequently, the finite binomial quantile in the [rank-tail formula](bell_cost.md#evaluating-the-rank-without-enumerating-bit-strings) obeys
+The lower strict inequality and convergence show that $`F_N(k_{\varepsilon}-1)\lt a`$ for all sufficiently large $`N`$. The coupling gives $`F_N(k_{\varepsilon})\geq a`$ for every $`N`$, even when the upper inequality is equality. Consequently, the finite binomial quantile in the [rank-tail formula](bell_cost.md#evaluating-the-rank-without-enumerating-bit-strings) obeys
 
 ```math
 k_N=k_{\varepsilon}
@@ -140,7 +140,7 @@ C_P^{\sqrt{2\varepsilon}}(N,p_N)
 \leq C_P^{\varepsilon}(N,p_N).
 ```
 
-In particular, for fixed $`\mu>0`$ and $`0<\varepsilon<(1-e^{-\mu})/2`$, both bounds have a positive finite logarithmic coefficient. Thus
+In particular, for fixed $`\mu>0`$ and $`0\lt \varepsilon\lt (1-e^{-\mu})/2`$, both bounds have a positive finite logarithmic coefficient. Thus
 
 ```math
 C_T^{\varepsilon}(N,p_N)=\Theta_{\mu,\varepsilon}(\log N).

@@ -45,7 +45,7 @@ This is a uniform guarantee for the whole experiment, including arbitrary causal
 For $`0\lt\epsilon\lt1`$, let
 
 ```math
-k_\epsilon=\min\{k\ge0:\Pr[\operatorname{Pois}(\mu)\le k]\ge1-\epsilon^2\}.
+k_\epsilon=\min\{k\ge0:\Pr[\mathrm{Pois}(\mu)\le k]\ge1-\epsilon^2\}.
 ```
 
 The [resolution theorem](science/poisson_limit.md) proves
@@ -67,7 +67,7 @@ At zero error the exact Bell supply is $`N`$. Minimizing initial entanglement of
 The [inefficient-record theorem](science/inefficient_record.md) keeps the unread dynamics fixed and passes each ideal sign through a binary symmetric channel. Write its known efficiency parameter as $`0\le\zeta\le1`$; the sign-flip probability is $`(1-\sqrt\zeta)/2`$. For every fixed $`\zeta>0`$, logarithmic Bell supply survives at fixed whole-process half-trace error
 
 ```math
-0<\epsilon<\zeta\mu e^{-\mu}.
+0\lt \epsilon\lt \zeta\mu e^{-\mu}.
 ```
 
 A mixed-state entanglement witness proves the lower bound, and a locally dephased approximation to the joint meter resource gives the upper. At $`\zeta=0`$ the retained sign is a fair coin and the process is entanglement-free. The sharp Poisson coefficient above is for the efficient instrument; no exact coefficient is claimed for the noisy record.
@@ -85,9 +85,15 @@ python tools/verify.py
 
 The [verification guide](verification/README.md) identifies the checked algebra, finite spectra, examples and numerical limitations. Analytical proofs establish the all-size claims. The [LLM reading guide](llms.txt) maps questions to authoritative pages.
 
+## Learn the result
+
+The educational anchor is **Mark M. Wilde, *Quantum Information Theory*, second edition (2017)**. The [Wilde bridge](learning/WILDE_BRIDGE.md) maps verified sections to the project and translates its distance conventions. The [two-slot example](learning/WORKED_EXAMPLE.md) follows a complete finite resource calculation. The [30 milestones](learning/MILESTONES.md) form one route through twelve background and eighteen narrative targets, from a single measurement slot to the full resolution law and its limits.
+
+Start with the [learning route](learning/README.md), or use the [science route](science/README.md) for direct access to the proofs.
+
 ## Physical scope
 
-The divergent limit permits increasingly frequent local interventions and retention of intermediate outputs during a fixed experiment. A restricted experiment with only initial/final quantum access has a bounded-cost realization. This does not assert infinite cost for every fixed-bandwidth physical monitor. Local memory, communication delay, detector inefficiency, gate synthesis and thermodynamic reset are separate resources or models.
+The divergent limit permits increasingly frequent local interventions and retention of intermediate outputs during a fixed experiment. A restricted experiment with only initial/final quantum access has a bounded-cost realization. This does not assert infinite cost for every fixed-bandwidth physical monitor. Local memory, communication delay, other detector-noise models, gate synthesis and thermodynamic reset are separate resources or models.
 
 ## Purpose and contact
 

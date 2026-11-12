@@ -8,7 +8,7 @@ This is a robustness theorem for the instrument defined below. It does not ident
 
 ## The instrument
 
-Keep the model's parity observable $`Q=Z_A\otimes Z_B`$. For one slot write $`a=\sqrt{1-p}`$, $`b=\sqrt p`$, with $`0<p<1/2`$. For $`0\leq\zeta\leq1`$, define
+Keep the model's parity observable $`Q=Z_A\otimes Z_B`$. For one slot write $`a=\sqrt{1-p}`$, $`b=\sqrt p`$, with $`0\lt p\lt 1/2`$. For $`0\leq\zeta\leq1`$, define
 
 ```math
 \mathcal I_s^{(\zeta)}(\rho)
@@ -85,7 +85,7 @@ q_N=Np(1-p)^{N-1},
 g_N=\zeta+\frac{1-\zeta}{N}.
 ```
 
-For $`N\geq2`$ and $`0\leq\varepsilon<1`$,
+For $`N\geq2`$ and $`0\leq\varepsilon\lt 1`$,
 
 ```math
 \boxed{
@@ -145,8 +145,8 @@ W=(\Pi_1\otimes\Pi_1)
 The vector is embedded in the corresponding successful subspace, so $`0\leq W\leq I`$. If the local projection succeeds on $`\widetilde\Omega`$ with probability $`q'`$ and gives conditional state $`\tau'`$, write $`g'=\langle\Phi_N|\tau'|\Phi_N\rangle`$. Then
 
 ```math
-q'g'=\operatorname{Tr}(W\widetilde\Omega)
-\geq\operatorname{Tr}(W\Omega_{N,p,\zeta})-\varepsilon
+q'g'=\mathrm{Tr}(W\widetilde\Omega)
+\geq\mathrm{Tr}(W\Omega_{N,p,\zeta})-\varepsilon
 =q_Ng_N-\varepsilon.
 ```
 
@@ -175,7 +175,7 @@ E_R(\rho)
 \geq g\log_2N-1.
 ```
 
-When $`g<1/N`$, the last right side is negative and follows instead from $`E_R\geq0`$.
+When $`g\lt 1/N`$, the last right side is negative and follows instead from $`E_R\geq0`$.
 
 The initial $`m`$ Bell pairs have $`E_R=m`$. LOCC monotonicity, including the selective local projection and its public success flag, yields $`m\geq q'E_R(\tau')`$. Therefore
 
@@ -203,7 +203,7 @@ The right side is the efficient instrument's exact rank-tail cost. It is an uppe
 
 ## Fixed-time consequence
 
-Take $`p=p_N=(1-e^{-2\mu/N})/2`$ with fixed $`\mu>0`$ and fixed $`0<\zeta\leq1`$. Then
+Take $`p=p_N=(1-e^{-2\mu/N})/2`$ with fixed $`\mu>0`$ and fixed $`0\lt \zeta\leq1`$. Then
 
 ```math
 q_N\longrightarrow\mu e^{-\mu},
@@ -213,7 +213,7 @@ q_N\longrightarrow\mu e^{-\mu},
 For any fixed error satisfying
 
 ```math
-0<\varepsilon<\zeta\mu e^{-\mu},
+0\lt \varepsilon\lt \zeta\mu e^{-\mu},
 ```
 
 the finite lower bound has a positive logarithmic coefficient for all sufficiently large $`N`$. The efficient upper bound is $`O_{\mu,\varepsilon}(\log N)`$. Hence
