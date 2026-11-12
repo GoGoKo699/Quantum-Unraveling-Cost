@@ -1,0 +1,19 @@
+# Quantum Unraveling Cost
+
+Question: how much initially supplied shared entanglement is needed to implement efficient diffusive parity monitoring when users may intervene between weak steps?
+
+Read science/model.md for all resource, reference, timing and error conventions. The deterministic initial Bell supply includes all entangled catalysts. No quantum communication is free. Local gates, storage and classical communication are free.
+
+Routes:
+- Overview and principal consequences: README.md and science/README.md.
+- Exact two-way resource reduction: science/resource_equivalence.md.
+- Exact finite purified-strategy-error Bell cost and trace-distance bounds: science/bell_cost.md.
+- Finite binomial expression, Poisson quantile, limiting order and threshold: science/poisson_limit.md.
+- Exact entropy supply versus exact Bell number: science/exact_resources.md.
+- Free unread/jump records versus costly efficient diffusive instrument: science/unraveling_gap.md.
+- Specified inefficient/noisy retained record, mixed-state lower bound and qualified logarithmic robustness: science/inefficient_record.md.
+- Weak-step continuum interpretation, restricted interfaces and finite cadence: science/continuum_and_cadence.md.
+- Attribution and comparison boundaries: references/RELATED_WORK.md and references/references.bib.
+- Reproduction and finite verification limits: verification/README.md, tools/verify.py, tests/test_science.py.
+
+Do not replace efficient branch backaction by POVM statistics, global error by per-step error, or deterministic initial supply by expected/net consumption. The exact rank-tail formula uses purified distance; half trace distance has related bounds. The asymptotic N counts instrument slots at fixed gamma*T and total error, not the number of independent fixed-strength experiments. The ideal finite-N theorem is exact; detector-inefficiency and finite-speed hardware claims require additional models.
