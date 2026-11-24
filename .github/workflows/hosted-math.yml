@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
-      CAPTURE_REVISION: 3ad5012e56c6ffdb299066b82da090163dbf8840
+      CAPTURE_REVISION: f915a3adfebf8a356163f10d0b956cc7f2ec28d0
     steps:
       - name: Check out the validation helper source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -45,7 +45,7 @@ jobs:
         run: |
           export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"
           node verification/hosted_math/probe_hosted_math.cjs --root "$GITHUB_WORKSPACE/checked-source" --repository "$GITHUB_REPOSITORY" --revision "$CAPTURE_REVISION" --page README.md --output "$RUNNER_TEMP/hosted-probe-readme" || echo "README probe reported a diagnostic failure"
-          node verification/hosted_math/probe_hosted_math.cjs --root "$GITHUB_WORKSPACE/checked-source" --repository "$GITHUB_REPOSITORY" --revision "$CAPTURE_REVISION" --page science/noisy_meter_quantile.md --output "$RUNNER_TEMP/hosted-probe-inefficiency" || echo "Proof probe reported a diagnostic failure"
+          node verification/hosted_math/probe_hosted_math.cjs --root "$GITHUB_WORKSPACE/checked-source" --repository "$GITHUB_REPOSITORY" --revision "$CAPTURE_REVISION" --page science/unraveling_gap.md --output "$RUNNER_TEMP/hosted-probe-inefficiency" || echo "Proof probe reported a diagnostic failure"
       - name: Compare every hosted mathematical expression
         if: ${{ !cancelled() }}
         run: |
