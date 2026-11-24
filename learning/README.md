@@ -12,4 +12,4 @@ The single educational anchor is Mark M. Wilde, *Quantum Information Theory*, se
 | [Scientific account](../science/README.md) | Read the authoritative model, statements and proofs. |
 | [Verification](../verification/README.md) | Reproduce the finite checks and distinguish them from the analytical proof. |
 
-The route first fixes what the user can access and what the simulator must preserve. It then explains why a product input can expose a shared entangled resource, how a single joint truncation controls every causal test, and why rare event positions lead to a Poisson coefficient. The inefficient-record result follows only after its changed instrument is specified.
+The route first fixes what the user can access and what the simulator must preserve. It then explains why a product input can expose a shared entangled resource, how a single joint truncation controls every causal test, and why rare event positions lead to a Poisson coefficient. The final steps examine the mixed meter, derive the efficiency-dependent Poisson coefficient, and compare the two process distances.

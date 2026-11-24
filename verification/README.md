@@ -53,6 +53,8 @@ local X-weight-one projection probability, the normalized projected state,
 and its maximally-entangled fidelity. These are finite matrix checks of the
 robustness mechanism; they do not prove its asymptotic resource converse.
 
+The noisy-record quantile tests check the local-replacement decomposition, the weight-sector incidence expansion, projector diagonals, and captured thinning mass by exact rational arithmetic. High-precision examples illustrate the changed Poisson coefficient and check finite CDF dominance. The analytic coupling establishes the threshold equality.
+
 These checks can catch finite circuit, normalization, spectrum-ordering,
 quantile, and resource-convention errors. They are not proofs of the causal
 simulation theorem, the Schmidt-number converse, the coupling result, asymptotic

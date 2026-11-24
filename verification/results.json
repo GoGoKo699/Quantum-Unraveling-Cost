@@ -3,7 +3,7 @@
   "python": "3.12.14",
   "numpy": "2.3.5",
   "scipy": "1.17.0",
-  "tests_run": 15,
+  "tests_run": 19,
   "mu": "1",
   "p_evaluation_decimal_precision": 60,
   "rank_arithmetic": "exact integers for supplied finite-decimal p_N and epsilon",
