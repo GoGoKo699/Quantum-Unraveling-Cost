@@ -130,7 +130,7 @@ The power $`\zeta`$ here is important: the original meter coherence has factor $
 Suppose an $`m`$-Bell simulator has $`d_T\leq\varepsilon`$. Apply the resource-recovering tester, including its local corrections, to obtain a state $`\widetilde\Omega`$ with
 
 ```math
-\frac12\|\widetilde\Omega-\Omega_{N,p,\zeta}\|_1
+\frac12\Vert \widetilde\Omega-\Omega_{N,p,\zeta}\Vert _1
 \leq\varepsilon.
 ```
 
@@ -157,7 +157,7 @@ This inequality treats the sector overlap as one unconditional effect. It requir
 Let $`E_R`$ be relative entropy of entanglement, with logarithms in base two:
 
 ```math
-E_R(\rho)=\inf_{\sigma\in\mathrm{SEP}}D(\rho\|\sigma).
+E_R(\rho)=\inf_{\sigma\in\mathrm{SEP}}D(\rho\Vert \sigma).
 ```
 
 For any state $`\rho`$ on $`\mathbb C^N\otimes\mathbb C^N`$ with $`g=\langle\Phi_N|\rho|\Phi_N\rangle`$,
@@ -170,7 +170,7 @@ For $`g\geq1/N`$, every separable state has overlap at most $`1/N`$ with $`\Phi_
 
 ```math
 E_R(\rho)
-\geq D_{\mathrm{bin}}(g\|1/N)
+\geq D_{\mathrm{bin}}(g\Vert 1/N)
 \geq g\log_2N-h_2(g)
 \geq g\log_2N-1.
 ```

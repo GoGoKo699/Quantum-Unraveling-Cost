@@ -18,7 +18,7 @@ P\!\left(\mathcal T[\mathcal C_{N,p}],
 \leq\varepsilon.
 ```
 
-The testers and their normalized final outputs are as in [the model](model.md). Root fidelity is $`F(\rho,\sigma)=\|\sqrt\rho\sqrt\sigma\|_1`$, and purified distance is $`P(\rho,\sigma)=\sqrt{1-F(\rho,\sigma)^2}`$. In particular, for a normalized pure target,
+The testers and their normalized final outputs are as in [the model](model.md). Root fidelity is $`F(\rho,\sigma)=\Vert \sqrt\rho\sqrt\sigma\Vert _1`$, and purified distance is $`P(\rho,\sigma)=\sqrt{1-F(\rho,\sigma)^2}`$. In particular, for a normalized pure target,
 
 ```math
 P(\rho,|\psi\rangle\langle\psi|)^2
@@ -69,7 +69,7 @@ To prove this first for a pure state $`|v\rangle`$ of Schmidt rank at most $`R`$
 
 ```math
 |\langle\psi|v\rangle|^2
-\leq\| (\Pi\otimes I)|\psi\rangle\|^2
+\leq\Vert  (\Pi\otimes I)|\psi\rangle\Vert ^2
 =\mathrm{Tr}(\Pi\psi_A)
 \leq\sum_{j=1}^{R}\lambda_j.
 ```
@@ -142,7 +142,7 @@ For comparison, define $`C_T^{\varepsilon}(N,p)`$ using
 ```math
 d_T(\mathcal C,\mathcal D)
 =\sup_{\mathcal T}\frac12
-\|\mathcal T[\mathcal C]-\mathcal T[\mathcal D]\|_1.
+\Vert \mathcal T[\mathcal C]-\mathcal T[\mathcal D]\Vert _1.
 ```
 
 For normalized states, the Fuchs–van de Graaf inequalities imply

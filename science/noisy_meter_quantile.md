@@ -10,7 +10,7 @@ Let $`\mu\gt 0`$, $`0\lt \zeta\leq1`$, and $`0\lt\varepsilon\lt1`$ be fixed, and
 
 ```math
 k=\min\bigl\{j\in\mathbb Z_{\geq0}:\Pr[X\gt j]\leq\varepsilon^2\bigr\},
-\qquad X\sim\operatorname{Pois}(\zeta\mu).
+\qquad X\sim\mathrm{Pois}(\zeta\mu).
 ```
 
 Then
@@ -46,20 +46,20 @@ Set $`r=(1-\zeta)p`$ and $`q=\zeta p/(1-r)`$. With $`|\phi_q\rangle=\sqrt{1-q}|0
 
 The identity follows from $`(1-r)(1-q)=1-p`$ and $`(1-r)q=\zeta p`$. Shared randomness and local replacements therefore turn $`|\phi_q\rangle^{\otimes N}`$ into $`\Omega_N`$. The replacement independently discards each slot's two meter qubits and prepares $`|11\rangle`$ with probability $`r`$. It is a trace-preserving LOCC map, so it preserves the purified-error guarantee of any approximation to the pure input.
 
-The squared Schmidt coefficient corresponding to each bit string of weight $`j`$ is $`q^j(1-q)^{N-j}`$. The total weight of shell $`j`$ is $`\Pr[Y_N=j]`$, with $`Y_N\sim\operatorname{Bin}(N,q)`$. Put $`u=\mu/N`$. The odds of $`q`$ obey
+The squared Schmidt coefficient corresponding to each bit string of weight $`j`$ is $`q^j(1-q)^{N-j}`$. The total weight of shell $`j`$ is $`\Pr[Y_N=j]`$, with $`Y_N\sim\mathrm{Bin}(N,q)`$. Put $`u=\mu/N`$. The odds of $`q`$ obey
 
 ```math
 \frac{q}{1-q}=\frac{\zeta p}{1-p}=\zeta\tanh u
 \leq\zeta u\leq e^{\zeta u}-1.
 ```
 
-It follows that $`q\leq 1-e^{-\zeta u}`$. For each slot, draw an independent $`\operatorname{Pois}(\zeta u)`$ variable and keep its nonempty indicator with independent probability $`q/(1-e^{-\zeta u})`$. The resulting indicators are independent Bernoulli variables with parameter $`q`$. Their sum is at most the sum of the Poisson variables, which has law $`X`$. Thus $`\Pr[Y_N\gt k]\leq\Pr[X\gt k]\leq\varepsilon^2`$ for every $`N`$, including equality in the defining Poisson inequality. Retaining all strings through weight $`k`$ captures at least $`1-\varepsilon^2`$ of the mass, using $`R=\sum_{j=0}^{\min(k,N)}\binom Nj=O_k(N^k)`$ strings.
+It follows that $`q\leq 1-e^{-\zeta u}`$. For each slot, draw an independent $`\mathrm{Pois}(\zeta u)`$ variable and keep its nonempty indicator with independent probability $`q/(1-e^{-\zeta u})`$. The resulting indicators are independent Bernoulli variables with parameter $`q`$. Their sum is at most the sum of the Poisson variables, which has law $`X`$. Thus $`\Pr[Y_N\gt k]\leq\Pr[X\gt k]\leq\varepsilon^2`$ for every $`N`$, including equality in the defining Poisson inequality. Retaining all strings through weight $`k`$ captures at least $`1-\varepsilon^2`$ of the mass, using $`R=\sum_{j=0}^{\min(k,N)}\binom Nj=O_k(N^k)`$ strings.
 
 The normalized Schmidt truncation has squared fidelity at least $`1-\varepsilon^2`$ with $`|\phi_q\rangle^{\otimes N}`$. Any pure state of Schmidt rank at most $`R`$ can be prepared from $`\lceil\log_2R\rceil`$ Bell pairs by LOCC, for example by preparing it locally and teleporting the compressed share. Applying the independent replacements and then the meter circuit proves the upper bound. For $`k=0`$, the truncation is the single vacuum string, so the entire construction starts with zero Bell pairs at every $`N`$.
 
 ## Lower bound from excitation subspaces
 
-Assume $`k\geq1`$. For a weight $`w`$, use the orthonormal basis $`|S,S\rangle`$, with $`S\subseteq\{1,\ldots,N\}`$ and $`|S|=w`$. These are the maximally correlated bit strings with weight $`w`$ in both laboratories. The trace of the weight-$`w`$ block of $`\Omega_N`$ is $`\Pr[B_N=w]`$ with $`B_N\sim\operatorname{Bin}(N,p)`$. After dividing by this trace, the block entry at $`S,T`$ is
+Assume $`k\geq1`$. For a weight $`w`$, use the orthonormal basis $`|S,S\rangle`$, with $`S\subseteq\{1,\ldots,N\}`$ and $`|S|=w`$. These are the maximally correlated bit strings with weight $`w`$ in both laboratories. The trace of the weight-$`w`$ block of $`\Omega_N`$ is $`\Pr[B_N=w]`$ with $`B_N\sim\mathrm{Bin}(N,p)`$. After dividing by this trace, the block entry at $`S,T`$ is
 
 ```math
 \frac{\zeta^{w-|S\cap T|}}{\binom Nw}.
@@ -74,24 +74,24 @@ For $`0\leq j\leq w`$, let $`W_j(S,J)=\mathbf 1_{J\subseteq S}`$, with columns i
  \zeta^{w-j}(1-\zeta)^j W_jW_j^{\mathsf T}.
 ```
 
-Indeed, the $`S,T`$ entry of $`W_jW_j^{\mathsf T}`$ is $`\binom{|S\cap T|}{j}`$. The binomial theorem gives the block entry above. Also, $`\operatorname{Tr}(W_jW_j^{\mathsf T})=\binom Nw\binom wj`$, so the traces of the summands are the probabilities of a binomial variable with parameters $`w,1-\zeta`$.
+Indeed, the $`S,T`$ entry of $`W_jW_j^{\mathsf T}`$ is $`\binom{|S\cap T|}{j}`$. The binomial theorem gives the block entry above. Also, $`\mathrm{Tr}(W_jW_j^{\mathsf T})=\binom Nw\binom wj`$, so the traces of the summands are the probabilities of a binomial variable with parameters $`w,1-\zeta`$.
 
-For $`k\leq w\leq N`$, let $`P_w`$ project onto the embedded column space of $`W_{w-k}`$. Its range contains the column space of every $`W_j`$ with $`j\leq w-k`$. To see this for $`j\leq t=w-k`$, sum the columns of $`W_t`$ over all $`t`$-sets containing a fixed $`j`$-set $`J`$. The result is $`\binom{w-j}{t-j}W_j(\cdot,J)`$. The probability detected by $`P_w`$ in the normalized block is consequently at least $`\Pr[\operatorname{Bin}(w,\zeta)\geq k]`$.
+For $`k\leq w\leq N`$, let $`P_w`$ project onto the embedded column space of $`W_{w-k}`$. Its range contains the column space of every $`W_j`$ with $`j\leq w-k`$. To see this for $`j\leq t=w-k`$, sum the columns of $`W_t`$ over all $`t`$-sets containing a fixed $`j`$-set $`J`$. The result is $`\binom{w-j}{t-j}W_j(\cdot,J)`$. The probability detected by $`P_w`$ in the normalized block is consequently at least $`\Pr[\mathrm{Bin}(w,\zeta)\geq k]`$.
 
 For a fixed integer $`W\geq k`$, set $`P_* = \sum_{w=k}^W P_w`$ for $`N\geq W`$. The ranges at different weights are orthogonal, so $`P_*`$ is a projector. It serves as a mathematical fidelity witness on the state recovered by the LOCC tester. Its target probability satisfies
 
 ```math
-a_N=\operatorname{Tr}(P_*\Omega_N)
-\geq \sum_{w=k}^{W}\Pr[B_N=w]\Pr[\operatorname{Bin}(w,\zeta)\geq k].
+a_N=\mathrm{Tr}(P_*\Omega_N)
+\geq \sum_{w=k}^{W}\Pr[B_N=w]\Pr[\mathrm{Bin}(w,\zeta)\geq k].
 ```
 
-For fixed $`W`$ the sum converges to the same expression with $`B\sim\operatorname{Pois}(\mu)`$ in place of $`B_N`$. As $`W`$ increases, the limiting sum tends to $`\Pr[X\geq k]`$ by Poisson thinning. Minimality of $`k`$ gives $`\Pr[X\geq k]\gt \varepsilon^2`$. Choose a finite $`W`$ for which the truncated limit is already strictly above $`\varepsilon^2`$. Then $`a_N\geq\varepsilon^2+\delta`$ for some $`\delta\gt 0`$ and all sufficiently large $`N`$.
+For fixed $`W`$ the sum converges to the same expression with $`B\sim\mathrm{Pois}(\mu)`$ in place of $`B_N`$. As $`W`$ increases, the limiting sum tends to $`\Pr[X\geq k]`$ by Poisson thinning. Minimality of $`k`$ gives $`\Pr[X\geq k]\gt \varepsilon^2`$. Choose a finite $`W`$ for which the truncated limit is already strictly above $`\varepsilon^2`$. Then $`a_N\geq\varepsilon^2+\delta`$ for some $`\delta\gt 0`$ and all sufficiently large $`N`$.
 
 The permutation symmetry of the column space makes all diagonal entries of $`P_w`$ on the weight-$`w`$ maximally correlated basis equal. The rank is at most the number of columns, $`\binom N{w-k}`$. Each such diagonal is therefore at most $`\binom N{w-k}/\binom Nw=O_{W,k}(N^{-k})`$, uniformly over $`k\leq w\leq W`$. For any normalized vector in the range of $`P_*`$, the squared magnitude of each basis coefficient is bounded by the corresponding diagonal entry of $`P_*`$. This follows by projecting the basis vector and applying Cauchy–Schwarz. The vector is maximally correlated, so these squared magnitudes are precisely its squared Schmidt coefficients.
 
-For any unit vector of Schmidt rank at most $`R`$, its squared overlap with each unit vector in the range is at most the sum of the latter vector's largest $`R`$ squared Schmidt coefficients, hence at most $`c_{W,k}RN^{-k}`$. Taking the supremum over unit vectors in the range bounds its squared projection onto that range. By linearity the same bound holds for $`\operatorname{Tr}(P_*\sigma)`$ on every state $`\sigma`$ of Schmidt number at most $`R`$.
+For any unit vector of Schmidt rank at most $`R`$, its squared overlap with each unit vector in the range is at most the sum of the latter vector's largest $`R`$ squared Schmidt coefficients, hence at most $`c_{W,k}RN^{-k}`$. Taking the supremum over unit vectors in the range bounds its squared projection onto that range. By linearity the same bound holds for $`\mathrm{Tr}(P_*\sigma)`$ on every state $`\sigma`$ of Schmidt number at most $`R`$.
 
-Measure $`\{P_*,I-P_*\}`$ on the target and the recovered simulator state, and write $`b_N=\operatorname{Tr}(P_*\widetilde\Omega_N)`$. By purified-distance contraction, their binary root fidelity is at least $`\sqrt{1-\varepsilon^2}`$. Since $`a_N\gt \varepsilon^2`$, the binary fidelity inequality gives
+Measure $`\{P_*,I-P_*\}`$ on the target and the recovered simulator state, and write $`b_N=\mathrm{Tr}(P_*\widetilde\Omega_N)`$. By purified-distance contraction, their binary root fidelity is at least $`\sqrt{1-\varepsilon^2}`$. Since $`a_N\gt \varepsilon^2`$, the binary fidelity inequality gives
 
 ```math
 b_N\geq

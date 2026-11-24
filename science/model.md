@@ -53,7 +53,7 @@ This deliberately favorable local resource account isolates shared entanglement.
 For two normalized states, use root fidelity and purified distance
 
 ```math
-F(\rho,\sigma)=\|\sqrt\rho\sqrt\sigma\|_1,
+F(\rho,\sigma)=\Vert \sqrt\rho\sqrt\sigma\Vert _1,
 \qquad
 P(\rho,\sigma)=\sqrt{1-F(\rho,\sigma)^2}.
 ```
@@ -72,7 +72,7 @@ The minimum is over causal LOCC simulators with the stated initial supply. We us
 
 ```math
 d_T(\mathsf C,\mathsf D)
-=\sup_{\mathsf T}\frac12\|\mathsf T[\mathsf C]-\mathsf T[\mathsf D]\|_1.
+=\sup_{\mathsf T}\frac12\Vert \mathsf T[\mathsf C]-\mathsf T[\mathsf D]\Vert _1.
 ```
 
 The error is for the whole experiment, uniformly over interventions, with fixed total tolerance as $`N`$ grows. The exact finite cost formula belongs to $`d_P`$. The [Bell-cost proof](bell_cost.md) translates the conclusions to $`d_T`$ without identifying their finite-error optima.
