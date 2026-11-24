@@ -26,16 +26,16 @@ These sections supply the language and standard tools. The shrinking-step Poisso
 The [project model](../science/model.md) uses **root fidelity** $`F`$ and purified distance $`P`$:
 
 ```math
-F(\rho,\sigma)=\|\sqrt\rho\sqrt\sigma\|_1,
+F(\rho,\sigma)=\lVert \sqrt\rho\sqrt\sigma\rVert_1,
 \qquad P(\rho,\sigma)=\sqrt{1-F(\rho,\sigma)^2}.
 ```
 
-Wilde's versioned companion §9.2 uses squared fidelity, so its quantity is $`F_{\mathrm W}=F^2`$. The companion §9.1 calls the unhalved norm the trace distance. The project uses half trace distance $`D=\tfrac12\|\rho-\sigma\|_1`$. Thus the conversion is
+Wilde's versioned companion §9.2 uses squared fidelity, so its quantity is $`F_{\mathrm W}=F^2`$. The companion §9.1 calls the unhalved norm the trace distance. The project uses half trace distance $`D=\tfrac12\lVert \rho-\sigma\rVert_1`$. Thus the conversion is
 
 ```math
 F_{\mathrm W}=F^2,\qquad
 P=\sqrt{1-F_{\mathrm W}},\qquad
-\|\rho-\sigma\|_1=2D.
+\lVert \rho-\sigma\rVert_1=2D.
 ```
 
 For pure states, $`F^2=|\langle\psi|\phi\rangle|^2`$. A retained Schmidt mass $`w`$ therefore gives $`P=\sqrt{1-w}`$, not $`1-w`$. This is why the exact Bell-cost formula uses the mass threshold $`1-\epsilon^2`$.

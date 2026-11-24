@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
-      CAPTURE_REVISION: fc7aa3237f42d6177480534d8aef8c42c23494f6
+      CAPTURE_REVISION: 3ad5012e56c6ffdb299066b82da090163dbf8840
     steps:
       - name: Check out the validation helper source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -44,13 +44,20 @@ jobs:
       - name: Probe inline display and table mathematics
         run: |
           export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"
-          node verification/hosted_math/probe_hosted_math.cjs --root "$GITHUB_WORKSPACE/checked-source" --repository "$GITHUB_REPOSITORY" --revision "$CAPTURE_REVISION" --page README.md --output "$RUNNER_TEMP/hosted-probe-readme"
-          node verification/hosted_math/probe_hosted_math.cjs --root "$GITHUB_WORKSPACE/checked-source" --repository "$GITHUB_REPOSITORY" --revision "$CAPTURE_REVISION" --page science/noisy_meter_quantile.md --output "$RUNNER_TEMP/hosted-probe-inefficiency"
+          node verification/hosted_math/probe_hosted_math.cjs --root "$GITHUB_WORKSPACE/checked-source" --repository "$GITHUB_REPOSITORY" --revision "$CAPTURE_REVISION" --page README.md --output "$RUNNER_TEMP/hosted-probe-readme" || echo "README probe reported a diagnostic failure"
+          node verification/hosted_math/probe_hosted_math.cjs --root "$GITHUB_WORKSPACE/checked-source" --repository "$GITHUB_REPOSITORY" --revision "$CAPTURE_REVISION" --page science/noisy_meter_quantile.md --output "$RUNNER_TEMP/hosted-probe-inefficiency" || echo "Proof probe reported a diagnostic failure"
       - name: Compare every hosted mathematical expression
         if: ${{ !cancelled() }}
         run: |
           export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"
-          node verification/hosted_math/capture_hosted_math.cjs --root "$GITHUB_WORKSPACE/checked-source" --repository "$GITHUB_REPOSITORY" --revision "$CAPTURE_REVISION" --output "$RUNNER_TEMP/hosted-math"
+          node verification/hosted_math/capture_hosted_math.cjs --root "$GITHUB_WORKSPACE/checked-source" --repository "$GITHUB_REPOSITORY" --revision "$CAPTURE_REVISION" --output "$RUNNER_TEMP/hosted-math-first" || {
+            status=$?
+            if test -f "$RUNNER_TEMP/hosted-math-first/hosted-report.json" && grep -Eq 'HTTP (502|503|504)' "$RUNNER_TEMP/hosted-math-first/hosted-report.json"; then
+            node verification/hosted_math/capture_hosted_math.cjs --root "$GITHUB_WORKSPACE/checked-source" --repository "$GITHUB_REPOSITORY" --revision "$CAPTURE_REVISION" --output "$RUNNER_TEMP/hosted-math" --resume-from "$RUNNER_TEMP/hosted-math-first"
+            else
+              exit "$status"
+            fi
+          }
       - name: Retain the actual captures and comparison reports
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -58,6 +65,7 @@ jobs:
           name: hosted-math-${{ env.CAPTURE_REVISION }}
           path: |
             ${{ runner.temp }}/hosted-math
+            ${{ runner.temp }}/hosted-math-first
             ${{ runner.temp }}/hosted-probe-readme
             ${{ runner.temp }}/hosted-probe-inefficiency
           if-no-files-found: error

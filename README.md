@@ -68,7 +68,7 @@ Independent sign flips with probability $`(1-\sqrt{\zeta})/2`$ leave the unread 
 
 ```math
 C_{P,\zeta}^{\epsilon}(N,p_N)=k\log_2N+O_{\mu,\zeta,\epsilon}(1),
-\qquad k=\min\{j\ge0:\Pr[\operatorname{Pois}(\zeta\mu)\gt j]\le\epsilon^2\}.
+\qquad k=\min\{j\ge0:\Pr[\mathrm{Pois}(\zeta\mu)\gt j]\le\epsilon^2\}.
 ```
 
 The coefficient counts how many coherent excitations must be retained at the stated error. A pure meter with classical replacements attains the bound. A family of excitation-sector projectors forces the same coefficient for arbitrary correlated LOCC simulators. If $`k=0`$, zero Bell pairs suffice at every resolution. For example, at $`\mu=1`$ and $`\epsilon=0.1`$, the coefficient falls from 4 at perfect efficiency to 2 at 25% efficiency.
