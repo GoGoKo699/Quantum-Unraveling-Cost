@@ -298,35 +298,35 @@ The educational anchor is Mark M. Wilde, *Quantum Information Theory*, second ed
 
 ### M27
 
-**Retain a large entangled sector despite sign noise**
+**Thin the coherent excitations by detector efficiency**
 
-- **Central question:** What shared quantum coherence remains in the one-excitation sector of all archived mixed outputs?
-- **Target:** Calculate the sector's success probability and its maximally entangled overlap, and transfer that overlap through one unconditional trace-distance effect.
-- **Dependencies and story role:** Uses M02, M10, M17 and M26. It isolates the part of the mixed resource needed for a robust converse.
-- **Conceptual connection:** A rare but fixed-probability sector can retain coherence across a dimension growing with the intervention count.
-- **Project source:** [Inefficient record: one-excitation sector](../science/inefficient_record.md#the-one-excitation-sector) and [unconditional sector witness](../science/inefficient_record.md#transferring-the-sector-witness-through-a-process-error).
-- **Wilde pointer:** §§3.8 and 9.1; §19.2 for its resource role.
+- **Central question:** How can a weaker pure meter and a local classical replacement prepare the full mixed meter?
+- **Target:** Derive its convex decomposition. Use Poisson counts to dominate the number of retained coherent excitations, including when the tail equals the allowed squared error.
+- **Dependencies and story role:** Uses M09, M19, M22 and M26. It gives the noisy-record construction and the zero-supply region.
+- **Conceptual connection:** A local replacement channel fills in the incoherent events after preparing a compressed pure resource.
+- **Project source:** [Noisy-record theorem](../science/noisy_meter_quantile.md), achievability.
+- **Wilde pointer:** §§3.8, 9.2 and 19.2.
 
 ### M28
 
-**Prove the inefficient-record logarithmic law**
+**Bound the best approximation to a mixed history**
 
-- **Central question:** How does the retained sector force a growing Bell supply at a fixed small error?
-- **Target:** Use the binary relative-entropy estimate and selective LOCC monotonicity for the lower bound, then locally dephase the compressed efficient resource for the uniform upper bound.
-- **Dependencies and story role:** Uses M09–M11, M19, M23 and M27. It completes the specified imperfect-detector result.
-- **Conceptual connection:** A mixed-state monotone supplies the converse while a contractive resource map supplies the upper, without requiring a sharp mixed-state dilution formula.
-- **Project source:** [Inefficient record: entanglement bound](../science/inefficient_record.md#entanglement-required-by-the-successful-state), [upper bound](../science/inefficient_record.md#uniform-upper-bound), and [fixed-time consequence](../science/inefficient_record.md#fixed-time-consequence).
-- **Wilde pointer:** §11.8, §19.2 and §9.2.
+- **Central question:** Why does the same quantile bound every correlated simulator?
+- **Target:** Decompose each weight sector into subset-inclusion contributions. Relate the target's witness mass to Poisson thinning and the simulator's mass to its Schmidt number.
+- **Dependencies and story role:** Uses M02, M09–M10, M17 and M27. It completes the sharp purified-error result.
+- **Conceptual connection:** Permutation symmetry controls every computational-basis diagonal of the witness, so a vector in its range has no large Schmidt coefficient.
+- **Project source:** [Noisy-record theorem](../science/noisy_meter_quantile.md), converse. [One-excitation trace-distance witness](../science/inefficient_record.md#the-one-excitation-sector).
+- **Wilde pointer:** §§3.8, 9.2 and 19.2.
 
 ### M29
 
 **Assemble the scope of each completed resource claim**
 
 - **Central question:** Which source interface, metric, efficiency, error threshold, and order of limits belong to each result?
-- **Target:** Give one consistent comparison of efficient purified-error optimality, trace-distance growth, the fixed-positive-efficiency robustness regime, and the free zero-contrast and bounded-cadence cases.
+- **Target:** Give one consistent comparison of the purified-error laws at both detector efficiencies, trace-distance growth, and the free zero-contrast and bounded-cadence cases.
 - **Dependencies and story role:** Uses M15 and M18–M28. It checks the scientific conclusion at the complete-task level.
 - **Conceptual connection:** A resource law is a statement about an operational task with fixed quantifiers; changing an interface or error convention can change the claim.
-- **Project source:** [Model](../science/model.md), [metric comparison](../science/bell_cost.md#a-trace-distance-process-error), [Poisson law](../science/poisson_limit.md#a-sharp-quantile-law), [inefficient fixed-time result](../science/inefficient_record.md#fixed-time-consequence), and [cadence limits](../science/continuum_and_cadence.md#three-different-limits).
+- **Project source:** [Model](../science/model.md), [metric comparison](../science/bell_cost.md#a-trace-distance-process-error), [Poisson law](../science/poisson_limit.md#a-sharp-quantile-law), [noisy-record quantile](../science/noisy_meter_quantile.md) and [noisy half-trace result](../science/inefficient_record.md#fixed-time-consequence), and [cadence limits](../science/continuum_and_cadence.md#three-different-limits).
 - **Wilde pointer:** §§9.1–9.3 and 19.3.
 
 ### M30

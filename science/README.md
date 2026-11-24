@@ -12,7 +12,7 @@ Read the [model](model.md) first. The proof then has two parts: recover a known 
 | How does a fixed duration produce a Poisson law? | [Resolution asymptotics](poisson_limit.md) |
 | Why do entropy supply and exact Bell count differ? | [Exact resource conventions](exact_resources.md) |
 | How can the same noise have free and costly records? | [Unraveling separation](unraveling_gap.md) |
-| Does specified inefficient readout remove the cost? | [Noisy-record robustness](inefficient_record.md) |
+| How does detector efficiency change the optimal Bell supply? | [Noisy-record quantile](noisy_meter_quantile.md) and [mixed-meter and trace-distance bounds](inefficient_record.md) |
 | What happens when access has finite cadence? | [Continuum interpretation and interface limits](continuum_and_cadence.md) |
 | Which ingredients are established work? | [Related work](../references/RELATED_WORK.md) |
 | What finite checks can be reproduced? | [Verification](../verification/README.md) |
@@ -31,4 +31,4 @@ C_P^\epsilon(N,p)
 =\left\lceil\log_2\min\left\{R:\sum_{j=1}^R\lambda_j\ge1-\epsilon^2\right\}\right\rceil.
 ```
 
-At $`p=p_N`$ and fixed $`\mu,\epsilon`$, the [Poisson theorem](poisson_limit.md) evaluates its leading order. The coefficient is a one-experiment quantile, rather than an entropy rate. The [unraveling comparison](unraveling_gap.md) places this cost beside exactly free unread and jump-record implementations. All statements retain the resource and interface qualifications in the model.
+At $`p=p_N`$ and fixed $`\mu,\epsilon`$, the [Poisson theorem](poisson_limit.md) evaluates its leading order. The coefficient is a one-experiment quantile. With independent readout errors, the [mixed-meter theorem](noisy_meter_quantile.md) replaces its Poisson mean by efficiency times duration and retains the sharp coefficient at fixed purified error. The [unraveling comparison](unraveling_gap.md) places this cost beside exactly free unread and jump-record implementations. All statements retain the resource and interface qualifications in the model.

@@ -4,7 +4,7 @@
 
 Two remote qubits undergo parity dephasing for a fixed duration. Its unread evolution is a shared-random mixture of local Pauli operations. A jump record is also free to generate. Reproducing its efficient diffusive measurement record, with quantum outputs available for interventions between weak steps, requires a growing supply of shared entanglement.
 
-The central result gives the **exact initial Bell-pair cost at fixed whole-process purified error** and a sharp fixed-time resolution law. It allows arbitrary correlated resources, local storage, adaptation and reuse generated from the charged Bell supply. Local operations and classical communication are free; quantum communication is absent.
+The central result gives the **exact initial Bell-pair cost at fixed whole-process purified error** for the efficient instrument and sharp fixed-time resolution laws at both perfect and imperfect efficiency. It allows arbitrary correlated resources, local storage, adaptation and reuse generated from the charged Bell supply. Local operations and classical communication are free; quantum communication is absent.
 
 ## Same generator, different resource costs
 
@@ -62,15 +62,18 @@ For example, at $`\mu=1`$ and purified error $`\epsilon=0.1`$, the coefficient i
 
 At zero error the exact Bell supply is $`N`$. Minimizing initial entanglement of formation over arbitrary finite shared states instead gives $`N h_2(p_N)\sim\mu\log_2N`$ for an exact simulation. The [resource-convention account](science/exact_resources.md) explains why those statements differ.
 
-## Robustness to a noisy retained sign
+## Bell supply at imperfect detector efficiency
 
-The [inefficient-record theorem](science/inefficient_record.md) keeps the unread dynamics fixed and passes each ideal sign through a binary symmetric channel. Write its known efficiency parameter as $`0\le\zeta\le1`$; the sign-flip probability is $`(1-\sqrt\zeta)/2`$. For every fixed $`\zeta>0`$, logarithmic Bell supply survives at fixed whole-process half-trace error
+Independent sign flips with probability $`(1-\sqrt{\zeta})/2`$ leave the unread dynamics unchanged. For fixed efficiency $`0\le\zeta\le1`$, duration parameter $`\mu=\gamma T`$ and positive whole-process purified error $`\epsilon\lt1`$, the [noisy-record theorem](science/noisy_meter_quantile.md) gives
 
 ```math
-0\lt \epsilon\lt \zeta\mu e^{-\mu}.
+C_{P,\zeta}^{\epsilon}(N,p_N)=k\log_2N+O_{\mu,\zeta,\epsilon}(1),
+\qquad k=\min\{j\ge0:\Pr[\operatorname{Pois}(\zeta\mu)\gt j]\le\epsilon^2\}.
 ```
 
-A mixed-state entanglement witness proves the lower bound, and a locally dephased approximation to the joint meter resource gives the upper. At $`\zeta=0`$ the retained sign is a fair coin and the process is entanglement-free. The sharp Poisson coefficient above is for the efficient instrument; no exact coefficient is claimed for the noisy record.
+The coefficient counts how many coherent excitations must be retained at the stated error. A pure meter with classical replacements attains the bound. A family of excitation-sector projectors forces the same coefficient for arbitrary correlated LOCC simulators. If $`k=0`$, zero Bell pairs suffice at every resolution. For example, at $`\mu=1`$ and $`\epsilon=0.1`$, the coefficient falls from 4 at perfect efficiency to 2 at 25% efficiency.
+
+The [mixed-meter and trace-distance analysis](science/inefficient_record.md) also gives a half-trace-distance logarithmic lower bound when $`0\lt\epsilon\lt\zeta\mu e^{-\mu}`$. At zero efficiency, the fair reported sign and the unread channel can both be simulated exactly with shared randomness.
 
 ## Read and reproduce
 

@@ -2,7 +2,7 @@
 
 The contribution is a time-resolution law for the distributed implementation of a specified monitored process. Its ingredients include established nonlocal weak measurements, sequential channel simulation, entanglement monotones and pure-state conversion. The bibliography is in [references.bib](references.bib). The comparison below separates those ingredients from the result established here.
 
-## Efficient nonlocal weak measurements
+## Nonlocal weak measurements
 
 [Pierre Vidil and Keiichi Edamatsu, *Nonlocal generalized quantum measurements of bipartite spin products without maximal entanglement*, New Journal of Physics 23, 043004 (2021)](https://doi.org/10.1088/1367-2630/abee3f); [arXiv:1912.07135v1](https://arxiv.org/abs/1912.07135v1).
 
@@ -14,7 +14,7 @@ This earlier work realizes nonlocal product-observable interactions with adjusta
 
 [Lan Jiang, Zhenhua Li and Tao Li, *Nonlocal generalized quantum measurement of product observables with mixed entanglement*, Optics Express 31, 12508–12519 (2023)](https://doi.org/10.1364/OE.487883).
 
-This work uses mixed entangled meters for arbitrary-strength product-observable measurements. It is a relevant resource comparison, but a measurement's outcome probabilities do not by themselves determine its disturbance. The efficient Lüders instrument here has a single Kraus operator in each retained branch. An allegedly cheaper simulator must reproduce that backaction on arbitrary reference-entangled inputs, not only the same POVM. The [inefficient-record account](../science/inefficient_record.md) states a particular mixed-meter extension and proves its fixed-small-error logarithmic supply bound. Its primitive is a local dephasing of the known pure meter; the new claim concerns uniform process cost with growing temporal access. Other mixed-branch variants require separate bounds.
+This work uses mixed entangled meters for arbitrary-strength product-observable measurements. It is a relevant resource comparison, but a measurement's outcome probabilities do not by themselves determine its disturbance. The efficient Lüders instrument here has a single Kraus operator in each retained branch. An allegedly cheaper simulator must reproduce that backaction on arbitrary reference-entangled inputs, not only the same POVM. The [inefficient-record account](../science/inefficient_record.md) specifies the complete instrument for independent sign flips. The [quantile theorem](../science/noisy_meter_quantile.md) determines the resulting fixed-purified-error coefficient. Its primitive is a local dephasing of the known pure meter; the new claim concerns uniform process cost with growing temporal access. Other mixed-branch variants require separate bounds.
 
 ## Entanglement cost and sequential simulation
 
@@ -29,6 +29,8 @@ Section 3.1 defines sequential simulation against adaptive strategy tests and re
 The fixed-channel many-copy asymptotic theorem does not state the present triangular family, where the channel itself weakens as $`p_N\sim\mu/N`$. Here its structure is used to derive the exact finite-$`N`$ Bell cost in purified strategy distance from the captured Schmidt mass, and then the Poisson-quantile coefficient of $`\log N`$. The zero-cost unread/jump interface and bounded-cost no-intervention QND interface specify what operationally changes when the time-resolved efficient instrument is requested.
 
 [Michael A. Nielsen, *Conditions for a Class of Entanglement Transformations*, Physical Review Letters 83, 436–439 (1999)](https://doi.org/10.1103/PhysRevLett.83.436), supplies deterministic pure-state conversion by majorization. [Barbara M. Terhal and Paweł Horodecki, *Schmidt number for density matrices*, Physical Review A 61, 040301(R) (2000)](https://doi.org/10.1103/PhysRevA.61.040301), supplies LOCC monotonicity of Schmidt number. These results support the resource truncation upper bound and the Bell-rank converse.
+
+[Francesco Buscemi and Nilanjana Datta, *Entanglement cost in practical scenarios*, Physical Review Letters 106, 130503 (2011)](https://doi.org/10.1103/PhysRevLett.106.130503) characterize one-shot LOCC dilution using smoothed Schmidt number. [Thomas Theurer, Kun Fang and Gilad Gour, *Single-shot entanglement manipulation of states and channels revisited*, IEEE Transactions on Information Theory 71 (2025)](https://arxiv.org/abs/2312.17088) give an exact general mixed-state characterization in terms of smoothed conditional max-entropy. Those characterizations optimize over general states or ensembles. The noisy-meter result evaluates a particular sequence of changing weak states to bounded additive Bell cost, using an explicit preparation and a matching subset-incidence witness. Subset-incidence matrices are classical objects, as in [D. H. Gottlieb, *A certain class of incidence matrices* (1966)](https://www.math.purdue.edu/~gottlieb/Bibliography/Incidence.pdf). The argument here uses only nesting, symmetry, and the dimension bound by the number of columns.
 
 ## Continuous measurements and their costs
 

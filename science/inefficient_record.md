@@ -4,7 +4,7 @@
 
 The logarithmic lower bound survives a specified detector imperfection: independently flipping each weak binary sign with fixed contrast. The resulting instrument has the same unread parity-dephasing channel and a weaker measurement signal. For every fixed positive efficiency, its initial Bell-pair supply is still of order $`\log N`$ at a sufficiently small fixed total process error.
 
-This is a robustness theorem for the instrument defined below. It does not identify a sharp finite-error coefficient for inefficient monitoring, and it does not cover arbitrary detector noise or hardware imperfections.
+This page defines the mixed meter and gives half-trace-distance bounds. At fixed whole-process purified error, the [noisy-meter quantile theorem](noisy_meter_quantile.md) gives the sharp logarithmic coefficient for the same instrument.
 
 ## The instrument
 
