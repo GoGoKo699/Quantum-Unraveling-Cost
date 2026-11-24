@@ -24,7 +24,7 @@ p_h=\frac{1-e^{-2\gamma h}}2,
 The efficient binary measurement has Kraus operators
 
 ```math
-M_s=\sqrt{\frac{I+s\eta_h Q}{2}}
+M_s=\frac{\sqrt{I+s\eta_h Q}}{\sqrt{2}}
 =\frac{a_hI+s b_hQ}{\sqrt2},\qquad s\in\{+1,-1\}.
 ```
 
@@ -92,7 +92,7 @@ with $`b`$ held by Bob. Its construction consumes one Bell pair $`(|00\rangle_{a
 In each slot Bob measures $`b`$ with
 
 ```math
-L_s=\sqrt{\frac{I+s\eta_h Z_b}{2}}.
+L_s=\frac{\sqrt{I+s\eta_h Z_b}}{\sqrt{2}}.
 ```
 
 The identity $`(I\otimes L_s)V=VM_s`$ shows that a record $`\boldsymbol s`$ produces $`VK_{\boldsymbol s}`$, where $`K_{\boldsymbol s}=M_{s_N}\cdots M_{s_1}`$. Hence all record probabilities are correct. At the end Bob measures $`b`$ in the $`X`$ basis, obtaining $`t\in\{0,1\}`$. Its data Kraus operator is
