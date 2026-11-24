@@ -62,7 +62,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: hosted-math-${{ env.CAPTURE_REVISION }}
+          name: hosted-math-${{ env.CAPTURE_REVISION }}-${{ github.run_attempt }}
           path: |
             ${{ runner.temp }}/hosted-math
             ${{ runner.temp }}/hosted-math-first
