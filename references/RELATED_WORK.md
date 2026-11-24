@@ -2,7 +2,7 @@
 
 The contribution is a time-resolution law for the distributed implementation of a specified monitored process. Its ingredients include established nonlocal weak measurements, sequential channel simulation, entanglement monotones and pure-state conversion. The bibliography is in [references.bib](references.bib). The comparison below separates those ingredients from the result established here.
 
-## Nonlocal weak measurements
+## Efficient nonlocal weak measurements
 
 [Pierre Vidil and Keiichi Edamatsu, *Nonlocal generalized quantum measurements of bipartite spin products without maximal entanglement*, New Journal of Physics 23, 043004 (2021)](https://doi.org/10.1088/1367-2630/abee3f); [arXiv:1912.07135v1](https://arxiv.org/abs/1912.07135v1).
 
